@@ -1,0 +1,145 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "hi",
+        "hello",
+        "hey",
+        "good morning",
+        "good evening",
+        "is anyone there",
+        "hi support",
+        "hey there",
+        "hello there"
+      ],
+      "responses": [
+        "Hello! How can I help you today?",
+        "Hi there! What can I assist you with?",
+        "Welcome! How may I help you?",
+        "Hey! Good to see you.",
+        "Hi! How’s your day going?"
+      ]
+    },
+
+    {
+      "tag": "reset_password",
+      "patterns": [
+        "i forgot my password",
+        "reset my password",
+        "how can i reset my login password",
+        "password recovery help",
+        "can't remember my password",
+        "password not working",
+        "unable to login because of password"
+      ],
+      "responses": [
+        "You can reset your password by clicking on 'Forgot Password' on the login page.",
+        "Follow the password recovery instructions to reset your password.",
+        "Click on 'Forgot Password' and enter your email to reset it."
+      ]
+    },
+
+    {
+      "tag": "track_order",
+      "patterns": [
+        "where is my order",
+        "track my order",
+        "order delivery status",
+        "check my order status",
+        "my order is not delivered",
+        "order tracking help",
+        "when will my order arrive"
+      ],
+      "responses": [
+        "Please enter your order ID to track your order.",
+        "I can help track your order. Could you provide the order ID?",
+        "To check delivery status, please share your order number."
+      ]
+    },
+
+    {
+      "tag": "order_issue",
+      "patterns": [
+        "my order is delayed",
+        "order is late",
+        "wrong item delivered",
+        "received damaged product",
+        "order problem",
+        "issue with my order",
+        "package not correct"
+      ],
+      "responses": [
+        "Sorry for the inconvenience. Please contact support with your order ID for assistance.",
+        "We apologize for the issue. Kindly share your order ID to resolve it.",
+        "Please reach out to our support team with the order number to fix this problem."
+      ]
+    },
+
+    {
+      "tag": "refund",
+      "patterns": [
+        "i want a refund",
+        "how do i get refund",
+        "refund policy",
+        "money not refunded",
+        "refund for my order",
+        "cancel order and refund"
+      ],
+      "responses": [
+        "Refunds are processed within 5–7 business days after order cancellation.",
+        "You will receive your refund shortly once the order is cancelled.",
+        "Please contact support to initiate the refund process."
+      ]
+    },
+
+    {
+      "tag": "contact_support",
+      "patterns": [
+        "how do i contact support",
+        "customer care number",
+        "need help from support",
+        "contact customer service",
+        "talk to support agent",
+        "connect me to customer care"
+      ],
+      "responses": [
+        "You can contact support via email or call our helpline number.",
+        "Our support team is available via phone or email. Reach out anytime.",
+        "Please contact our customer service for assistance."
+      ]
+    },
+
+    {
+      "tag": "thanks",
+      "patterns": [
+        "thanks",
+        "thank you",
+        "thanks for your help",
+        "appreciate it",
+        "thank you so much"
+      ],
+      "responses": [
+        "You're welcome! Happy to help 😊",
+        "Glad I could help!",
+        "Anytime! Let me know if you need anything else."
+      ]
+    },
+
+    {
+      "tag": "goodbye",
+      "patterns": [
+        "bye",
+        "goodbye",
+        "see you",
+        "exit",
+        "thank you bye"
+      ],
+      "responses": [
+        "Goodbye! Have a great day 👋",
+        "Thanks for visiting. See you again!",
+        "Take care! 😊"
+      ]
+    }
+  ]
+}
