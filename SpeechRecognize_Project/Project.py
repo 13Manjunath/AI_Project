@@ -1,26 +1,26 @@
+from flask import Flask, render_template, request
 import speech_recognition as sr
 
-def speech_to_text():
-    # Initialize recognizer
-    recognizer = sr.Recognizer()
+project = Flask(__name__)
 
-    # Use microphone as source
-    with sr.Microphone() as source:
-        print("🎤 Speak something...")
-        recognizer.adjust_for_ambient_noise(source, duration=0.5)
-        audio = recognizer.listen(source)
+@project.route("/", methods=["GET", "POST"])
+def index():
+    recognized_text = ""
 
-    try:
-        # Convert speech to text
-        text = recognizer.recognize_google(audio)
-        print("✅ Recognized Text:")
-        print(text)
+    if request.method == "POST":
+        recognizer = sr.Recognizer()
+        with sr.Microphone() as source:
+            recognizer.adjust_for_ambient_noise(source, duration=0.5)
+            audio = recognizer.listen(source)
 
-    except sr.UnknownValueError:
-        print("❌ Could not understand the audio")
+        try:
+            recognized_text = recognizer.recognize_google(audio)
+        except sr.UnknownValueError:
+            recognized_text = "Could not understand audio"
+        except sr.RequestError:
+            recognized_text = "Speech service error"
 
-    except sr.RequestError as e:
-        print(f"❌ API error: {e}")
+    return render_template("index.html", text=recognized_text)
 
 if __name__ == "__main__":
-    speech_to_text()
+    project.run(debug=True)
